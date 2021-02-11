@@ -1,12 +1,101 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Lab<title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
-  <body>
-    <script src="script.js"></script>
+  <body style="background-color:#1d2124">
+  <script src="script.js"></script>
+  <div class="top-box, container">
+    <h1>Register</h1>
+    <p>Please fill out every box on the form.</p>
+    <div>
+      <marquee direction="right"> 
+        <img id="dog" src="doggroup.gif" alt="dog" width=500></marquee>
+    </div>
+    <form>
+      <div class = "row">
+          <div class = "col-md-6 mb-2">
+            <label for = "inputFname" class = "form-label">First Name</label>
+            <input type="text" class = "form-control" id="fname" name="fname"  placeholder = "Enter First Name" >
+          </div>
+          <div class = "col-md-6 mb-2">
+            <label for = "inputLname" class = "form-label">Last Name</label>
+            <input type="text" class = "form-control" id="lname" name="lname"  placeholder = "Enter Last Name" >
+          </div>
+          <div class = "col-md-6 mb-2">
+            <label for = "inputEmail" class = "form-label">Email</label>
+            <input type="text" class = "form-control" id="email" name = "email" placeholder = "Enter Email">
+          </div>
+          <div class = "col-md-6 mb-2">
+            <label for = "inputPhone" class = "form-label">Phone Number</label>
+            <input type="phone" class = "form-control" id="phone" name="phone"  placeholder = "Enter Phone Number" name ="phone">
+          </div>
+          <div class = "col-md-6 mb-2">
+            <label for = "inputPassword" class = "form-label">Username</label>
+            <input type="uname" class = "form-control" id="uname" name="uname"  placeholder = "Enter username" name ="uname">
+          </div>
+          <div class = "col-md-6 mb-2">
+            <label for = "inputPassword" class = "form-label">Re-Enter Password</label>
+            <input type="pw" class = "form-control" id="pw" name="pw"  placeholder = "Enter Password" name ="pw">
+          </div>
+      </div>
+      
+
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#uploadModal">Upload file</button>
+      <!-- Modal -->
+      <div id="uploadModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h5 class="modal-title">Upload Picture</h5>
+            </div>
+            <div class="modal-body">
+              <!-- Form -->
+                Select file : <input type='file' name='file' id='upload' class='form-control'><br>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0"
+                      aria-valuemin="0" aria-valuemax="100" style="min-width: 20px">
+                      0%
+                  </div>
+                </div><br>
+                <input type='button' class='btn btn-info' value='Upload' id='btn_upload' onclick='makeProgress()'>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        <!--
+        <input id="upload" type="file" onchange="readURL(this);"><br>
+        -->
+        <div class="mt-4"><img id="imageResult"   class="img-fluid rounded  mx-auto d-block"  width='100' height='100'></div>
+        
+        
+        <div style="display:none;" id="loading" class="spinner-border text-info"></div><br>
+
+        <input class ="btn btn-info" id="submitbutton" onclick="onClickSubmit()" type="submit" value="Submit"><br>
+
+        
+
+      </form>
+      
+    </div>
+    
+    
   </body>
 </html>
+

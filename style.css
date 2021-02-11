@@ -1,0 +1,28 @@
+
+.container{
+  background-color:lightslategrey;
+}
+.image-area {
+    border: 2px dashed rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    position: relative;
+
+}
+
+
+h1 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
