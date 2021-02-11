@@ -23,12 +23,14 @@
       <marquee direction="right"> 
         <img id="dog" src="doggroup.gif" alt="dog" width=500></marquee>
     </div>
-    <form>
+    <form >
       <div class = "row">
           <div class = "col-md-6 mb-2">
             <label for = "inputFname" class = "form-label">First Name</label>
-            <input type="text" class = "form-control" id="fname" name="fname"  placeholder = "Enter First Name" >
+            <input type="text" class = "form-control" id="fname" name="fname"  placeholder = "Enter First Name" required>
+
           </div>
+          
           <div class = "col-md-6 mb-2">
             <label for = "inputLname" class = "form-label">Last Name</label>
             <input type="text" class = "form-control" id="lname" name="lname"  placeholder = "Enter Last Name" >
@@ -51,8 +53,9 @@
           </div>
       </div>
       
-
-      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#uploadModal">Upload file</button>
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#uploadModal">Upload file</button>
+      </div>
       <!-- Modal -->
       <div id="uploadModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -82,14 +85,12 @@
         <!--
         <input id="upload" type="file" onchange="readURL(this);"><br>
         -->
-        <div class="mt-4"><img id="imageResult"   class="img-fluid rounded  mx-auto d-block"  width='100' height='100'></div>
-        
-        
-        <div style="display:none;" id="loading" class="spinner-border text-info"></div><br>
-
+      <div class="mt-4 mb-4"><img id="imageResult"   class="img-fluid rounded  mx-auto d-block"  width='100' height='100'></div>
+      
+      <div class="d-flex justify-content-center">
+        <div style="display:none;" id="loading" class="spinner-border text-info"></div><br>    
         <input class ="btn btn-info" id="submitbutton" onclick="onClickSubmit()" type="submit" value="Submit"><br>
-
-        
+      </div>
 
       </form>
       

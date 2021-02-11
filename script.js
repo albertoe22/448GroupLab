@@ -26,7 +26,7 @@ function submitappear(){
   var load = document.getElementById("loading");
   submit.style.display = "block";
   load.style.display = "none"; 
-  alert("Submit Successful");
+  alert("Submission Successful");
 }
 var i = 0;
 
